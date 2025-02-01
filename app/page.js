@@ -2,9 +2,9 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MdOutlineVisibility, MdOutlineSettings, MdOutlineStar } from 'react-icons/md';
-import { RiCustomerService2Line } from 'react-icons/ri';
-import { GiDiamondTrophy } from 'react-icons/gi';
+import { MdOutlineBrandingWatermark, MdOutlineBusiness, MdOutlineDraw } from "react-icons/md";
+import { RiFacebookFill } from "react-icons/ri";
+// import { GiDiamondTrophy } from 'react-icons/gi';
 import About from './components/About';
 import Services from './components/Services';
 import CallToAction from './components/CallToAction';
@@ -18,13 +18,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
   const services = [
-    { id: 1, title: 'Social Media Management', icon: MdOutlineVisibility },
-    { id: 2, title: 'Brand Identity Design', icon: MdOutlineSettings },
-    { id: 3, title: 'Custom Thumbnails', icon: MdOutlineStar },
-    { id: 4, title: 'Poster & Banner Design', icon: RiCustomerService2Line },
-    { id: 5, title: 'Creative Logo Design', icon: GiDiamondTrophy },
+    { id: 1, title: "Brand Identity Design", icon: MdOutlineBrandingWatermark },
+    { id: 2, title: "Company Profile Design", icon: MdOutlineBusiness },
+    { id: 3, title: "Logo Design", icon: MdOutlineDraw },
+    { id: 4, title: "Social Media Management", icon: RiFacebookFill },
   ];
-
   const heroRef = useRef();
   const servicesRef = useRef();
   const sectionRefs = useRef([]);
@@ -70,7 +68,7 @@ const Page = () => {
   return (
     <>
       <div 
-        className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative pt-20"
+        className=" min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative pt-20"
         style={{ backgroundImage: "url('/Images/hero-bg.jpg')" }}
       >
         {/* Overlay */}
@@ -90,7 +88,7 @@ const Page = () => {
         {/* Services Section */}
         <div 
          
-          className="relative z-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-16 md:mt-24 px-4 w-full max-w-6xl"
+          className=" md:w-3/4  relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16 md:mt-24 px-4 w-full max-w-6xl"
         >
           {services.map((service) => (
             <div 
