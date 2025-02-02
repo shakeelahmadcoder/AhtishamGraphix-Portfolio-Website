@@ -12,7 +12,7 @@ const CallToAction = () => {
     title: "Let’s Create Something Amazing!",
     description:
       "Our team of graphic designers is ready to bring your ideas to life. Get started today!",
-    buttonText: "Hire a Designer",
+    buttonText: "Hire Me",
   };
 
   useEffect(() => {
@@ -101,17 +101,17 @@ const CallToAction = () => {
       style={{ backgroundImage: `url('${data.backgroundImage.src}')` }}
     >
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-blue-900/85 opacity-60"></div>
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-center">
-        <h2 className="cta-title text-5xl font-bold mb-6 text-yellow-400">
+        <h2 className="cta-title text-5xl font-bold mb-6 text-white">
           {data.title}
         </h2>
         <p className="cta-description text-lg max-w-2xl mx-auto text-gray-200">
           {data.description}
         </p>
-        <button className="cta-button mt-8 px-10 py-4 text-lg font-semibold bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-all transform hover:scale-105">
+        <button className="cta-button mt-8 px-10 py-4 text-lg font-semibold bg-blue-950 text-white rounded-lg  transition-all transform hover:scale-105">
           {data.buttonText}
         </button>
       </div>

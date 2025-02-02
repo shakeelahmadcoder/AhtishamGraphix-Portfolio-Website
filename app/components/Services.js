@@ -38,17 +38,17 @@ const Services = () => {
 
   return (
     <div className="container mx-auto px-4 md:px-8 lg:px-16 py-4">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">Our Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {servicesData.map((service) => (
           <div key={service.id} className="service-box border border-gray-400 p-6  text-center">
             <div className="flex justify-center mb-4">
-              <div className="text-yellow-400 text-4xl">{service.icon}</div>
+              <div className="text-blue-900 text-4xl">{service.icon}</div>
             </div>
             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
             <p className="text-gray-600 mb-4">{service.description}</p>
-            <p className="text-lg font-bold text-gray-800">{service.price}</p>
-            <button className="mt-4 px-6 py-2 bg-yellow-400 text-black  hover:bg-yellow-500 transition duration-300">{service.cta}</button>
+            {/* <p className="text-lg font-bold text-gray-800">{service.price}</p> */}
+            <button className="mt-4 px-6 py-2 bg-blue-900 text-white transition duration-300">{service.cta}</button>
           </div>
         ))}
       </div>

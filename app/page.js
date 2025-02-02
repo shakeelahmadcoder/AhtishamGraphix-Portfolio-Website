@@ -74,7 +74,7 @@ const Page = () => {
         style={{ backgroundImage: "url('/Images/hero-bg.jpg')" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-blue-900/85"></div>
 
         {/* Main Content */}
         <div ref={heroRef} className="relative z-10 text-center text-white px-4">
@@ -95,7 +95,7 @@ const Page = () => {
           {services.map((service) => (
             <div 
               key={service.id}
-              className="flex flex-col items-center text-center p-6 bg-transparent border border-gray-300 hover:border-yellow-400"
+              className="flex flex-col items-center text-center p-6 px-12 bg-transparent border border-gray-300 hover:border-yellow-400"
             >
               <Image 
                 src={service.imgSrc}

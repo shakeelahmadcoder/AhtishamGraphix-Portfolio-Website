@@ -29,9 +29,6 @@ import Media4 from "../../public/ImagesPortfolio/Media4.jpg";
 import Media5 from "../../public/ImagesPortfolio/Media5.jpg";
 import Media6 from "../../public/ImagesPortfolio/Media6.jpg";
 import Media7 from "../../public/ImagesPortfolio/Media7.jpg";
-import Media8 from "../../public/ImagesPortfolio/Media8.jpg";
-import Media9 from "../../public/ImagesPortfolio/Media9.jpg";
-import Media10 from "../../public/ImagesPortfolio/Media10.jpg";
 import Package1 from "../../public/ImagesPortfolio/Package1.jpg";
 import Package2 from "../../public/ImagesPortfolio/Package2.jpg";
 import Package3 from "../../public/ImagesPortfolio/Package3.jpg";
@@ -81,6 +78,17 @@ import Thumbnail20 from "../../public/ImagesPortfolio/Thumbnail20.jpg";
 import Thumbnail21 from "../../public/ImagesPortfolio/Thumbnail21.jpg";
 import Thumbnail22 from "../../public/ImagesPortfolio/Thumbnail22.jpg";
 import Thumbnail23 from "../../public/ImagesPortfolio/Thumbnail23.jpg";
+import Company1 from "../../public/ImagesPortfolio/Company1.jpg";
+import Company2 from "../../public/ImagesPortfolio/Company2.jpg";
+import Company3 from "../../public/ImagesPortfolio/Company3.jpg";
+import Company4 from "../../public/ImagesPortfolio/Company4.jpg";
+import Company5 from "../../public/ImagesPortfolio/Company5.jpg";
+import Company6 from "../../public/ImagesPortfolio/Company6.jpg";
+import Company7 from "../../public/ImagesPortfolio/Company7.jpg";
+import Company8 from "../../public/ImagesPortfolio/Company8.jpg";
+import Company9 from "../../public/ImagesPortfolio/Company9.jpg";
+import Company10 from "../../public/ImagesPortfolio/Company10.jpg";
+import Company11 from "../../public/ImagesPortfolio/Company11.jpg";
 
 const portfolioData = {
   Fiverr: [
@@ -135,9 +143,23 @@ Logo: [
     { id: 40, image: Media5 },
     { id: 41, image: Media6 },
     { id: 42, image: Media7 },
-    { id: 43, image: Media8 },
-    { id: 44, image: Media9 },
-    { id: 45, image: Media10 }
+  
+  ],
+  CompanyProfile: [
+    { id: 97, image: Company1 },
+    { id: 98, image: Company2 },
+    { id: 99, image: Company3 },
+    { id: 100, image: Company4 },
+    { id: 101, image: Company5 },
+    { id: 102, image: Company6 },
+    { id: 103, image: Company7 },
+    { id: 104, image: Company8 },
+    { id: 105, image: Company9 },
+    { id: 106, image: Company10 },
+    { id: 107, image: Company11 },
+    
+    
+  
   ],
   
   Standay: [

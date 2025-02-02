@@ -20,11 +20,14 @@ const Navbar = () => {
 
   return (
     <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-      scrolling ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      scrolling ? 'bg-blue-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-4">
-        <div className="flex justify-between items-center">
+        
           {/* Logo */}
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex  justify-between items-center gap-8">
           <div className="z-50">
             <Image 
               height={120} 
@@ -34,22 +37,19 @@ const Navbar = () => {
               className="hover:scale-105 transition-transform duration-300"
             />
           </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <ul className="flex gap-8 text-lg">
+            <ul className="flex gap-8 text-lg justify-between">
               {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Team', 'Contact'].map((item) => (
                 <Link 
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-white hover:text-blue-900 transition-colors duration-300 relative group"
+                  className="text-white hover:text-black transition-colors duration-300 relative group"
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-900 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </ul>
-            <button className="ml-4 py-2 px-6 border-2 border-blue-900 text-white rounded-md hover:bg-blue-900  transition-all duration-300 hover:scale-105">
+            <button className="ml-4 py-2 px-6 border-2 border-white text-white rounded-md hover:bg-black  transition-all duration-300 hover:scale-105">
               Get Started
             </button>
           </div>
@@ -62,11 +62,11 @@ const Navbar = () => {
             }`}
           />
         </div>
-      </div>
+      
 
       {/* Mobile Menu Overlay */}
       <div className={` md:hidden fixed inset-0 z-50 transition-all duration-300 ${
-        isOpn ? 'visible bg-black/50' : 'invisible bg-transparent'
+        isOpn ? 'visible bg-blue-900/50' : 'invisible bg-transparent'
       }`} onClick={handleIsOpen}></div>
 
       {/* Mobile Menu */}
