@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image'; // Import Image from next/image
+import logo from "../public/Images/pen-tool.png";
+import solution from "../public/Images/solution.png";
+import branding from "../public/Images/branding.png";
+import media from "../public/Images/media.png";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MdOutlineBrandingWatermark, MdOutlineBusiness, MdOutlineDraw } from "react-icons/md";
-import { RiFacebookFill } from "react-icons/ri";
-// import { GiDiamondTrophy } from 'react-icons/gi';
 import About from './components/About';
 import Services from './components/Services';
 import CallToAction from './components/CallToAction';
@@ -12,17 +14,17 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 
-
 // Register GSAP plugin once
 gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
   const services = [
-    { id: 1, title: "Brand Identity Design", icon: MdOutlineBrandingWatermark },
-    { id: 2, title: "Company Profile Design", icon: MdOutlineBusiness },
-    { id: 3, title: "Logo Design", icon: MdOutlineDraw },
-    { id: 4, title: "Social Media Management", icon: RiFacebookFill },
+    { id: 1, title: "Brand Identity Design", imgSrc: branding },
+    { id: 2, title: "Company Profile Design", imgSrc: solution },
+    { id: 3, title: "Logo Design", imgSrc: logo },
+    { id: 4, title: "Social Media Management", imgSrc: media },
   ];
+  
   const heroRef = useRef();
   const servicesRef = useRef();
   const sectionRefs = useRef([]);
@@ -68,7 +70,7 @@ const Page = () => {
   return (
     <>
       <div 
-        className=" min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative pt-20"
+        className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative pt-20"
         style={{ backgroundImage: "url('/Images/hero-bg.jpg')" }}
       >
         {/* Overlay */}
@@ -87,16 +89,22 @@ const Page = () => {
 
         {/* Services Section */}
         <div 
-         
-          className=" md:w-3/4  relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16 md:mt-24 px-4 w-full max-w-6xl"
+          ref={servicesRef}
+          className="md:w-3/4 relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16 md:mt-24 px-4 w-full max-w-6xl"
         >
           {services.map((service) => (
             <div 
               key={service.id}
-              className="flex flex-col items-center text-center p-6 bg-transparent border border-gray-300 hover:border-yellow-400 "
+              className="flex flex-col items-center text-center p-6 bg-transparent border border-gray-300 hover:border-yellow-400"
             >
-              <service.icon className="text-yellow-400 text-4xl mb-4 hover:scale-110 transition-transform" />
-              <h3 className="text-white  md:text-lg font-semibold">{service.title}</h3>
+              <Image 
+                src={service.imgSrc}
+                alt={service.title}
+                width={50} // Adjust the width as needed
+                height={50} // Adjust the height as needed
+                className="text-yellow-400 mb-4 hover:scale-110 transition-transform invert"
+              />
+              <h3 className="text-white md:text-lg font-semibold">{service.title}</h3>
             </div>
           ))}
         </div>
@@ -116,13 +124,15 @@ const Page = () => {
       </div>
 
       <div ref={(el) => sectionRefs.current[3] = el}>
-        <Portfolio  />
+        <Portfolio />
       </div>
-      <div ref={(el) => sectionRefs.current[3] = el}>
-        <Testimonials  />
+      
+      <div ref={(el) => sectionRefs.current[4] = el}>
+        <Testimonials />
       </div>
-      <div ref={(el) => sectionRefs.current[3] = el}>
-        <Contact  />
+      
+      <div ref={(el) => sectionRefs.current[5] = el}>
+        <Contact />
       </div>
     </>
   );

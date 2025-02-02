@@ -42,14 +42,14 @@ const Navbar = () => {
                 <Link 
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-white hover:text-yellow-400 transition-colors duration-300 relative group"
+                  className="text-white hover:text-blue-900 transition-colors duration-300 relative group"
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-900 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </ul>
-            <button className="ml-4 py-2 px-6 border-2 border-yellow-400 text-white rounded-md hover:bg-yellow-400 hover:text-black transition-all duration-300 hover:scale-105">
+            <button className="ml-4 py-2 px-6 border-2 border-blue-900 text-white rounded-md hover:bg-blue-900  transition-all duration-300 hover:scale-105">
               Get Started
             </button>
           </div>
@@ -83,14 +83,14 @@ const Navbar = () => {
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-black hover:text-yellow-500 py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-300"
+                className="text-black hover:text-blue-900 py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-300"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {item}
               </Link>
             ))}
           </ul>
-          <button className="mt-8 py-2 px-6 bg-yellow-400 text-black rounded-md hover:bg-yellow-500 transition-all duration-300 hover:scale-105">
+          <button className="mt-8 py-2 px-6 bg-blue-900 text-black rounded-md hover:bg-blue-900 transition-all duration-300 hover:scale-105">
             Get Started
           </button>
         </div>

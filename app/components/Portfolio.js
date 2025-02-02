@@ -19,19 +19,7 @@ import Fiverr7 from "../../public/ImagesPortfolio/Fiverr7.jpg";
 import Fiverr8 from "../../public/ImagesPortfolio/Fiverr8.jpg";
 import Fiverr9 from "../../public/ImagesPortfolio/Fiverr9.jpg";
 import Fiverr10 from "../../public/ImagesPortfolio/Fiverr10.jpg";
-import Fiverr11 from "../../public/ImagesPortfolio/Fiverr11.jpg";
-import Fiverr12 from "../../public/ImagesPortfolio/Fiverr12.jpg";
-import Fiverr13 from "../../public/ImagesPortfolio/Fiverr13.jpg";
-import Fiverr14 from "../../public/ImagesPortfolio/Fiverr14.jpg";
-import Fiverr15 from "../../public/ImagesPortfolio/Fiverr15.jpg";
-import Fiverr16 from "../../public/ImagesPortfolio/Fiverr16.jpg";
-import Fiverr17 from "../../public/ImagesPortfolio/Fiverr17.jpg";
-import Fiverr18 from "../../public/ImagesPortfolio/Fiverr18.jpg";
-import Fiverr19 from "../../public/ImagesPortfolio/Fiverr19.jpg";
-import Fiverr20 from "../../public/ImagesPortfolio/Fiverr20.jpg";
-import Fiverr21 from "../../public/ImagesPortfolio/Fiverr21.jpg";
-import Fiverr22 from "../../public/ImagesPortfolio/Fiverr22.jpg";
-import Fiverr23 from "../../public/ImagesPortfolio/Fiverr23.jpg";
+
 import Logo1 from "../../public/ImagesPortfolio/Logo1.jpg";
 import Logo2 from "../../public/ImagesPortfolio/Logo2.jpg";
 import Media1 from "../../public/ImagesPortfolio/Media1.jpg";
@@ -54,8 +42,6 @@ import Package7 from "../../public/ImagesPortfolio/Package7.jpg";
 import Package8 from "../../public/ImagesPortfolio/Package8.jpg";
 import Package9 from "../../public/ImagesPortfolio/Package9.jpg";
 import Package10 from "../../public/ImagesPortfolio/Package10.jpg";
-import Package11 from "../../public/ImagesPortfolio/Package11.jpg";
-import Package12 from "../../public/ImagesPortfolio/Package12.jpg";
 import Standay1 from "../../public/ImagesPortfolio/Standay1.jpg";
 import Standay2 from "../../public/ImagesPortfolio/Standay2.jpg";
 import Standay3 from "../../public/ImagesPortfolio/Standay3.jpg";
@@ -108,19 +94,7 @@ const portfolioData = {
     { id: 17, image: Fiverr8 },
     { id: 18, image: Fiverr9 },
     { id: 19, image: Fiverr10 },
-    { id: 20, image: Fiverr11 },
-    { id: 21, image: Fiverr12 },
-    { id: 22, image: Fiverr13 },
-    { id: 23, image: Fiverr14 },
-    { id: 24, image: Fiverr15 },
-    { id: 25, image: Fiverr16 },
-    { id: 26, image: Fiverr17 },
-    { id: 27, image: Fiverr18 },
-    { id: 28, image: Fiverr19 },
-    { id: 29, image: Fiverr20 },
-    { id: 30, image: Fiverr21 },
-    { id: 31, image: Fiverr22 },
-    { id: 32, image: Fiverr23 }
+
   ],
   Package: [
     { id: 46, image: Package1 },
@@ -133,8 +107,7 @@ const portfolioData = {
     { id: 53, image: Package8 },
     { id: 54, image: Package9 },
     { id: 55, image: Package10 },
-    { id: 56, image: Package11 },
-    { id: 57, image: Package12 }
+
   ],
   Bilboard: [
     { id: 1, image: Bilboard1 },
