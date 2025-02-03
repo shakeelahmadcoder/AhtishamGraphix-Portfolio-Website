@@ -1,54 +1,58 @@
 "use client"
 import React, { useEffect } from 'react';
-import { FaFigma, FaCamera, FaRegEye, FaPaintBrush, FaYoutube, FaFacebook } from 'react-icons/fa';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import logo from "../../public/Images/pen-tool.png";
+import solution from "../../public/Images/solution.png";
+import branding from "../../public/Images/branding.png";
+import media from "../../public/Images/media.png";
 
-// Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const servicesData = [
-  { id: 1, icon: <FaFigma />, title: "Fiverr Thumbnail Design", description: "Professional Fiverr thumbnails that attract customers to your gig.", price: "$30", cta: "Order Now" },
-  { id: 2, icon: <FaCamera />, title: "Product Photography", description: "High-quality product shots that help you showcase your items.", price: "$50", cta: "Book a Shoot" },
-  { id: 3, icon: <FaRegEye />, title: "YouTube Thumbnail Design", description: "Eye-catching thumbnails that boost your YouTube views.", price: "$25", cta: "Get Yours" },
-  { id: 4, icon: <FaPaintBrush />, title: "Social Media Graphics", description: "Custom graphics for your social media posts to engage your audience.", price: "$40", cta: "Hire Now" },
-  { id: 5, icon: <FaYoutube />, title: "YouTube Banner Design", description: "Create a stunning YouTube banner that represents your brand.", price: "$35", cta: "Design Yours" },
-  { id: 6, icon: <FaFacebook />, title: "Social Media Management", description: "Efficient social media management to help you grow online.", price: "$150/month", cta: "Contact Us" }
+  { id: 1, title: "Brand Identity Design", imgSrc: branding, description: "Crafting unique and memorable brand identities that leave a lasting impression." },
+  { id: 2, title: "Company Profile Design", imgSrc: solution, description: "Professional company profiles tailored to showcase your business effectively." },
+  { id: 3, title: "Logo Design", imgSrc: logo, description: "Creating impactful and meaningful logos that represent your brand vision." },
+  { id: 4, title: "Social Media Management", imgSrc: media, description: "Enhancing your online presence with strategic social media marketing." }
 ];
 
 const Services = () => {
   useEffect(() => {
-    gsap.fromTo(".service-box", 
-      { opacity: 0, y: 50 }, 
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
-        stagger: 0.2, 
-        scrollTrigger: {
-          trigger: ".service-box", 
-          start: "top 80%", 
-          end: "bottom 20%", 
-          scrub: true,
-          toggleActions: "restart none none none"
+    gsap.utils.toArray(".service-box").forEach((box, index) => {
+      gsap.fromTo(
+        box,
+        { 
+          opacity: 0, 
+          x: index % 2 === 0 ? -100 : 100 // Left items move from left, right items move from right
+        },
+        { 
+          opacity: 1, 
+          x: 0, 
+          duration: 0.2, 
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: box,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+            toggleActions: "restart none none none"
+          }
         }
-      }
-    );
+      );
+    });
   }, []);
 
   return (
-    <div className="container mx-auto px-4 md:px-8 lg:px-16 py-4">
+    <div id='services' className="container mx-auto px-4 md:px-8 lg:px-16 py-8 services-container">
       <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">Our Services</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {servicesData.map((service) => (
-          <div key={service.id} className="service-box border border-gray-400 p-6  text-center">
+          <div key={service.id} className="service-box border border-gray-400 p-6 text-center bg-white ">
             <div className="flex justify-center mb-4">
-              <div className="text-blue-900 text-4xl">{service.icon}</div>
+              <img src={service.imgSrc.src} alt={service.title} className="w-16 h-16" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 ">{service.title}</h3>
             <p className="text-gray-600 mb-4">{service.description}</p>
-            {/* <p className="text-lg font-bold text-gray-800">{service.price}</p> */}
-            <button className="mt-4 px-6 py-2 bg-blue-900 text-white transition duration-300">{service.cta}</button>
           </div>
         ))}
       </div>

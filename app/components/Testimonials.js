@@ -85,28 +85,36 @@ const Testimonials = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
+
+    centerMode: true,
+    
     customPaging: () => <div className="slick-dot" style={{ backgroundColor: 'white' }}></div>,
   };
 
   return (
     <section className="relative  bg-cover bg-center text-white py-16" style={{ backgroundImage: `url(${CallToImg.src})` }}>
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+     {/* Overlay */}
+     <div className="absolute inset-0 bg-blue-900/85"></div>
       <div className="relative container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-white mb-6">What Our Clients Say</h2>
 
         <SlickSlider {...settings}>
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="flex flex-col items-center justify-center text-center  bg-transparent p-6 rounded-lg shadow-lg">
+            <div key={testimonial.id} className="flex mx-auto flex-col items-center justify-center text-center  bg-transparent p-6 rounded-lg shadow-lg">
               <div className="w-32  m-auto items-center h-32 mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
                 <Image src={testimonial.image} alt={testimonial.name} width={128} height={128} className="object-cover" />
               </div>
               <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
               <p className="text-gray-300">{testimonial.text}</p>
 
-              <div className="flex my-2">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <FaStar key={i} className="text-yellow-400" />
-                ))}
+              <div className="flex mx-auto my-2 items-center justify-center  w-full">
+              
+                  <FaStar  className="text-yellow-400" />
+                  <FaStar  className="text-yellow-400" />
+                  <FaStar  className="text-yellow-400" />
+                  <FaStar  className="text-yellow-400" />
+                  <FaStar  className="text-yellow-400" />
+                
               </div>
             </div>
           ))}

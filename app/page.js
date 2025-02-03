@@ -41,10 +41,7 @@ const Page = () => {
 
     // Services cards animation
     gsap.from(servicesRef.current?.children || [], {
-      scrollTrigger: {
-        trigger: servicesRef.current,
-        start: 'top center'
-      },
+      
       duration: 0.8,
       y: 50,
       opacity: 0,

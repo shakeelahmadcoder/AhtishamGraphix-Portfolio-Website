@@ -33,9 +33,9 @@ export default function RootLayout({ children }) {
           href="https://wa.me/923219350989"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-8 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform"
+          className="fixed bottom-8 right-6 bg-green-500 text-white p-6 rounded-full shadow-lg hover:scale-110 transition-transform animate-pulse"
         >
-          <FaWhatsapp size={40} />
+          <FaWhatsapp size={50} />
         </a>
       </body>
     </html>
