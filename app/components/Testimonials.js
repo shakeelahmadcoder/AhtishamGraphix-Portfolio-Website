@@ -92,7 +92,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative  bg-cover bg-center text-white py-16" style={{ backgroundImage: `url(${CallToImg.src})` }}>
+    <section  id='testimonials' className="relative  bg-cover bg-center text-white py-16" style={{ backgroundImage: `url(${CallToImg.src})` }}>
      {/* Overlay */}
      <div className="absolute inset-0 bg-blue-900/85"></div>
       <div className="relative container mx-auto px-6 text-center">
@@ -101,7 +101,7 @@ const Testimonials = () => {
         <SlickSlider {...settings}>
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="flex mx-auto flex-col items-center justify-center text-center  bg-transparent p-6 rounded-lg shadow-lg">
-              <div className="w-32  m-auto items-center h-32 mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
+              <div className="w-32  m-auto items-center h-32 mb-4 rounded-full overflow-hidden border-4 border-white">
                 <Image src={testimonial.image} alt={testimonial.name} width={128} height={128} className="object-cover" />
               </div>
               <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
