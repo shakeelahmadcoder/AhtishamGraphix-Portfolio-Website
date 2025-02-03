@@ -16,7 +16,7 @@ import Bilboard7 from "../../public/ImagesPortfolio/Bilboard7.jpg";
 import Facebook1 from "../../public/ImagesPortfolio/Facebook1.jpg";
 import Facebook2 from "../../public/ImagesPortfolio/Facebook2.jpg";
 import Fiverr1 from "../../public/ImagesPortfolio/Fiverr1.jpg";
-// import Fiverr2 from "../../public/ImagesPortfolio/Fiverr2.jpg";
+import Fiverr2 from "../../public/ImagesPortfolio/Fiverr2.jpg";
 import Fiverr3 from "../../public/ImagesPortfolio/Fiverr3.jpg";
 import Fiverr4 from "../../public/ImagesPortfolio/Fiverr4.jpg";
 import Fiverr5 from "../../public/ImagesPortfolio/Fiverr5.jpg";
@@ -99,7 +99,7 @@ import Company11 from "../../public/ImagesPortfolio/Company11.jpg";
 const portfolioData = {
   Fiverr: [
     { id: 1, image: Fiverr1 },
-    // { id: 2, image: Fiverr2 },
+    { id: 2, image: Fiverr2 },
     { id: 3, image: Fiverr3 },
     { id: 4, image: Fiverr4 },
     { id: 5, image: Fiverr5 },
@@ -209,35 +209,9 @@ const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Fiverr");
   const filteredItems = portfolioData[activeCategory] || [];
 
-  const imageRefs = useRef([]);
+  
 
-  useEffect(() => {
-    // GSAP Animation with ScrollTrigger
-    filteredItems.forEach((_, index) => {
-      gsap.fromTo(
-        imageRefs.current[index],
-        {
-          opacity: 0,
-          x: index % 3 === 0 ? -200 : index % 3 === 1 ? 200 : 0, // Different directions
-          y: index % 3 === 2 ? -200 : 0, // Coming from the top for some images
-        },
-        {
-          opacity: 1,
-          x: 0, // Final x position (reset to original position)
-          y: 0, // Final y position
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: imageRefs.current[index],
-            start: "top 80%", // Start when the element is 80% from the top of the viewport
-            end: "top 30%",
-            toggleActions: "play reverse play reverse", // Play when entering, reverse when exiting
-            markers: false, // Remove debug markers if you don’t need them
-          },
-        }
-      );
-    });
-  }, [filteredItems]);
+ 
 
   return (
     <section id="portfolio" className="py-12 px-4 md:px-8 lg:px-16 xl:px-24">
@@ -270,7 +244,7 @@ const Portfolio = () => {
           <div
             key={item.id}
             className="group relative"
-            ref={(el) => (imageRefs.current[index] = el)} // Assigning refs to each image
+             // Assigning refs to each image
           >
             {/* Image Container with Fixed Aspect Ratio */}
             <div className="aspect-w-1 aspect-h-1">
@@ -278,8 +252,9 @@ const Portfolio = () => {
                 src={item.image.src}
                 width={1000} // Image width
                 height={1000} // Image height
-                alt={item.title}
+                alt="portfolio images"
                 className="object-cover w-full h-full"
+
               />
             </div>
 
