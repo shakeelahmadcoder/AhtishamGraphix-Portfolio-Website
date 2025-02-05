@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ${isOpn ? 'visible bg-black/50' : 'invisible bg-transparent'}`} onClick={handleIsOpen}></div>
+        <div className={`md:hidden fixed inset-0 -z-50 transition-all duration-300 ${isOpn ? 'visible bg-black/50' : 'invisible bg-transparent'}`} onClick={handleIsOpen}></div>
 
         {/* Mobile Menu */}
         <div className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white/95 backdrop-blur-lg z-50 transform transition-all duration-500 ease-in-out ${isOpn ? 'translate-x-0' : 'translate-x-full'}`}>

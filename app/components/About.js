@@ -70,7 +70,7 @@ const About = () => {
       </div>
 
       {/* Content Section */}
-      <div ref={rightRef} className="w-full sm:w-1/2">
+      <div ref={rightRef} className="w-full text-center sm:text-start sm:w-1/2">
         <h1 className="text-3xl font-bold text-blue-900 mb-6">
           Hey there! I am Muhammad Ahtisham
         </h1>

@@ -10,19 +10,19 @@ const Contact = () => {
     },
     contactInfo: [
       {
-        icon: <FaWhatsapp className="text-green-500 text-6xl" />,
+        icon: <FaWhatsapp className="text-green-500 text-5xl md:text-6xl" />,
         title: "WhatsApp Us",
         link: "https://wa.me/923219350989",
         buttonText: "Message on WhatsApp",
       },
       {
-        icon: <FaPhoneAlt className="text-blue-900 text-6xl" />,
+        icon: <FaPhoneAlt className="text-blue-900 text-5xl md:text-6xl" />,
         title: "Call Us",
         link: "tel:+923219350989",
         buttonText: "Call Now",
       },
       {
-        icon: <FaMapMarkerAlt className="text-red-500 text-6xl" />,
+        icon: <FaMapMarkerAlt className="text-red-500 text-5xl md:text-6xl" />,
         title: "Visit Us",
         details: ["Jauharabd District Khushab"],
       },
@@ -30,42 +30,41 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-screen flex items-center justify-center bg-white text-black p-5">
-      <div className="w-full max-w-5xl bg-opacity-60 p-10 rounded-xl shadow-2xl">
+    <div id="contact" className="flex items-center justify-center bg-white text-black px-4 py-10 md:py-20">
+      <div className="w-full max-w-6xl bg-opacity-60 p-6 md:p-10 ">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-6xl font-extrabold text-blue-900 mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-blue-900 mb-4 md:mb-6">
             {data.header.title}
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
             {data.header.description}
           </p>
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {data.contactInfo.map((item, index) => (
             <div
               key={index}
-              className="bg-white border-2 border-gray-300 p-10 rounded-lg shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105"
+              className="bg-white border border-gray-300 p-6 md:p-10 rounded-lg shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105"
             >
-              <div className="mb-6">{item.icon}</div>
-              <h3 className="text-3xl font-bold mb-4 text-blue-900">
+              <div className="mb-4 md:mb-6">{item.icon}</div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-blue-900">
                 {item.title}
               </h3>
-              {item.details
-                ? item.details.map((line, idx) => (
-                    <p key={idx} className="text-gray-600 text-lg mb-2">
-                      {line}
-                    </p>
-                  ))
-                : null}
+              {item.details &&
+                item.details.map((line, idx) => (
+                  <p key={idx} className="text-gray-600 text-sm md:text-lg mb-2">
+                    {line}
+                  </p>
+                ))}
               {item.link && (
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-blue-900 text-white font-semibold rounded-md hover:bg-blue-800 transition"
+                  className="px-4 py-2 md:px-6 md:py-3 bg-blue-900 text-white font-semibold rounded-md hover:bg-blue-800 transition"
                 >
                   {item.buttonText}
                 </a>
