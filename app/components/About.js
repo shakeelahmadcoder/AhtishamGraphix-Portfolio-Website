@@ -58,7 +58,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col sm:flex-row items-center sm:items-start gap-12">
+    <div id="about" className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col sm:flex-row items-center sm:items-start md:gap-12">
       {/* Image Section */}
       <div ref={leftRef} className="w-full sm:w-1/2 flex justify-center">
         <Image
@@ -70,7 +70,7 @@ const About = () => {
       </div>
 
       {/* Content Section */}
-      <div ref={rightRef} className="w-full text-center sm:text-start sm:w-1/2">
+      <div ref={rightRef} className="w-full text-center sm:text-start sm:w-1/2 flex flex-col sm:justify-start justify-center sm:items-start items-center">
         <h1 className="text-3xl font-bold text-blue-900 mb-6">
           Hey there! I am Muhammad Ahtisham
         </h1>
@@ -84,21 +84,21 @@ const About = () => {
         </p>
 
         {/* Info Section */}
-        <div className="mt-6 space-y-4 text-lg">
+        <div className="mt-6  space-y-4 text-lg text-start">
           <div className="flex gap-4">
-            <h1 className="font-semibold w-32">Name</h1>
+            <h1 className="font-semibold w-14 md:w-32">Name</h1>
             <p>: Muhammad Ahtisham</p>
           </div>
           <div className="flex gap-4">
-            <h1 className="font-semibold w-32">Address</h1>
+            <h1 className="font-semibold w-14 md:w-32">Address</h1>
             <p>: Chak No 11/50MB Jauharabad</p>
           </div>
           <div className="flex gap-4">
-            <h1 className="font-semibold w-32">Phone</h1>
+            <h1 className="font-semibold w-14 md:w-32">Phone</h1>
             <p>: 03219350989</p>
           </div>
           <div className="flex gap-4">
-            <h1 className="font-semibold w-32">Email</h1>
+            <h1 className="font-semibold w-14 md:w-32">Email</h1>
             <p>: shamiahtisham909@gmail.com</p>
           </div>
         </div>
