@@ -21,19 +21,5 @@ body {
   overflow-x: hidden;
 }
 
-@keyframes pulseEffect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
-.animate-pulse-custom {
-  animation: pulseEffect 1.5s infinite;
-}
 
