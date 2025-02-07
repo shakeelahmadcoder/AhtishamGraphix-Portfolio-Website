@@ -23,11 +23,11 @@ const Services = () => {
         box,
         { 
           opacity: 0, 
-          x: index % 2 === 0 ? -100 : 100 // Left items move from left, right items move from right
+          
         },
         { 
           opacity: 1, 
-          x: 0, 
+         
           duration: 0.2, 
           ease: "power2.out",
           scrollTrigger: {
