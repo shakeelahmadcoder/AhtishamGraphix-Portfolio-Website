@@ -7,8 +7,8 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 import Bilboard1 from "../../public/ImagesPortfolio/Bilboard1.jpg";
-import Bilboard2 from "../../public/ImagesPortfolio/Bilboard2.jpg";
-import Bilboard3 from "../../public/ImagesPortfolio/Bilboard3.jpg";
+// import Bilboard2 from "../../public/ImagesPortfolio/Bilboard2.jpg";
+// import Bilboard3 from "../../public/ImagesPortfolio/Bilboard3.jpg";
 import Bilboard4 from "../../public/ImagesPortfolio/Bilboard4.jpg";
 import Bilboard5 from "../../public/ImagesPortfolio/Bilboard5.jpg";
 import Bilboard6 from "../../public/ImagesPortfolio/Bilboard6.jpg";
@@ -123,11 +123,11 @@ const portfolioData = {
   ],
   Bilboard: [
     { id: 21, image: Bilboard1 },
-    { id: 22, image: Bilboard2 },
-    { id: 23, image: Bilboard3 },
+    // { id: 22, image: Bilboard2 },
+    // { id: 23, image: Bilboard3 },
     { id: 24, image: Bilboard4 },
     { id: 25, image: Bilboard5 },
-    { id: 26, image: Bilboard6 },
+    // { id: 26, image: Bilboard6 },
     { id: 27, image: Bilboard7 },
   ],
   Facebook: [
