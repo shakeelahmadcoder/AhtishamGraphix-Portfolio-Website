@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-white z-50 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${isOpen ? 'w-full h-full' : 'w-0 h-0 overflow-hidden'}`}>
+      <div className={`fixed inset-0 bg-white z-50 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} overflow-hidden`}>
         <ImCross 
           onClick={handleToggle} 
           className="absolute top-5 right-5 text-3xl cursor-pointer hover:rotate-90 transition-transform duration-300"

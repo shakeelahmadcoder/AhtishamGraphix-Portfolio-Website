@@ -74,8 +74,8 @@ const Page = () => {
   }, []);
 
   return (
-    <>
-      <div 
+    <div className="overflow-x-hidden overflow-y-hidden"> {/* Parent container par overflow-x-hidden add karein */}
+      <div  
         className="h-screen flex flex-col items-center justify-center bg-cover bg-center relative pt-20"
         style={{ backgroundImage: "url('/Images/hero-bg.jpg')" }}
       >
@@ -118,29 +118,29 @@ const Page = () => {
 
       {/* Animated Sections */}
       <div ref={(el) => sectionRefs.current[0] = el}>
-        <About />
+        <About  />
       </div>
       
       <div ref={(el) => sectionRefs.current[1] = el}>
-        <Services />
+        <Services  />
       </div>
 
       <div ref={(el) => sectionRefs.current[2] = el}>
-        <CallToAction />
+        <CallToAction  />
       </div>
 
       <div ref={(el) => sectionRefs.current[3] = el}>
-        <Portfolio />
+        <Portfolio  />
       </div>
       
       <div ref={(el) => sectionRefs.current[4] = el}>
-        <Testimonials />
+        <Testimonials  />
       </div>
       
       <div ref={(el) => sectionRefs.current[5] = el}>
-        <Contact />
+        <Contact  />
       </div>
-    </>
+    </div>
   );
 };
 
