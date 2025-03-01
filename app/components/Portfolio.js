@@ -25,6 +25,8 @@ import Fiverr7 from "../../public/ImagesPortfolio/Fiverr7.jpg";
 import Fiverr8 from "../../public/ImagesPortfolio/Fiverr8.jpg";
 import Fiverr9 from "../../public/ImagesPortfolio/Fiverr9.jpg";
 import Fiverr10 from "../../public/ImagesPortfolio/Fiverr10.jpg";
+import Fiverr11 from "../../public/ImagesPortfolio/Fiverr11.jpg";
+import Fiverr12 from "../../public/ImagesPortfolio/Fiverr12.jpg";
 
 import Logo1 from "../../public/ImagesPortfolio/Logo1.jpg";
 import Logo2 from "../../public/ImagesPortfolio/Logo2.jpg";
@@ -95,6 +97,15 @@ import Company8 from "../../public/ImagesPortfolio/Company8.jpg";
 import Company9 from "../../public/ImagesPortfolio/Company9.jpg";
 import Company10 from "../../public/ImagesPortfolio/Company10.jpg";
 import Company11 from "../../public/ImagesPortfolio/Company11.jpg";
+import Company12 from "../../public/ImagesPortfolio/Company12.jpg";
+import Company13 from "../../public/ImagesPortfolio/Company13.jpg";
+import Company14 from "../../public/ImagesPortfolio/Company14.jpg";
+import Company15 from "../../public/ImagesPortfolio/Company15.jpg";
+import Company16 from "../../public/ImagesPortfolio/Company16.jpg";
+import Company17 from "../../public/ImagesPortfolio/Company17.jpg";
+import Company18 from "../../public/ImagesPortfolio/Company18.jpg";
+
+
 
 const portfolioData = {
   Fiverr: [
@@ -108,6 +119,8 @@ const portfolioData = {
     { id: 8, image: Fiverr8 },
     { id: 9, image: Fiverr9 },
     { id: 10, image: Fiverr10 },
+    { id: 103, image: Fiverr11 },
+    { id: 104, image: Fiverr12 },
   ],
   Package: [
     { id: 11, image: Package1 },
@@ -159,6 +172,13 @@ const portfolioData = {
     { id: 47, image: Company9 },
     { id: 48, image: Company10 },
     { id: 49, image: Company11 },
+    { id: 90, image: Company12 },
+    { id: 91, image: Company13 },
+    { id: 92, image: Company14 },
+    { id: 93, image: Company15 },
+    { id: 94, image: Company16 },
+    { id: 95, image: Company17 },
+    { id: 96, image: Company18 },
   ],
   Standay: [
     { id: 50, image: Standay1 },

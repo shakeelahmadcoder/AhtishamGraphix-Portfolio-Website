@@ -12,46 +12,40 @@ const About = () => {
   const rightRef = useRef(null);
 
   useEffect(() => {
-    // Left section animation (appears from left)
+    // Left section animation (From left to center)
     gsap.fromTo(
       leftRef.current,
+      { x: -200, opacity: 0 },
       {
-        x: -200, // Start position: far left
-        opacity: 0, // Start opacity: 0 (invisible)
-      },
-      {
-        x: 0, // End position: original position
-        opacity: 1, // End opacity: 1 (fully visible)
+        x: 0,
+        opacity: 1,
         duration: 1.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: leftRef.current,
-          start: "top 80%", // Start when element reaches 80% of viewport
+          start: "top 80%",
           end: "top 30%",
-          toggleActions: "play none none none", // Play once when it enters
-          markers: false, // Remove debug markers if you don’t need them
+          toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          markers: false,
         },
       }
     );
 
-    // Right section animation (appears from right)
+    // Right section animation (From right to center)
     gsap.fromTo(
       rightRef.current,
+      { x: 200, opacity: 0 },
       {
-        x: 200, // Start position: far right
-        opacity: 0, // Start opacity: 0 (invisible)
-      },
-      {
-        x: 0, // End position: original position
-        opacity: 1, // End opacity: 1 (fully visible)
+        x: 0,
+        opacity: 1,
         duration: 1.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: rightRef.current,
-          start: "top 80%", // Start when element reaches 80% of viewport
+          start: "top 80%",
           end: "top 30%",
-          toggleActions: "play none none none", // Play once when it enters
-          markers: false, // Remove debug markers if you don’t need them
+          toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          markers: false,
         },
       }
     );
@@ -76,15 +70,11 @@ const About = () => {
         </h1>
         <p className="text-gray-800 text-lg leading-relaxed">
           A passionate Graphic Designer and Social Media Manager with a deep
-          love for visual storytelling. I specialize in branding, social media
-          design, and digital marketing materials, ensuring that every design I
-          create aligns perfectly with your business goals. If you're looking
-          for unique and engaging visuals that make an impact, let’s
-          collaborate!
+          love for visual storytelling...
         </p>
 
         {/* Info Section */}
-        <div className="mt-6  space-y-4 text-lg text-start">
+        <div className="mt-6 space-y-4 text-lg text-start">
           <div className="flex gap-4">
             <h1 className="font-semibold w-14 md:w-32">Name</h1>
             <p>: Muhammad Ahtisham</p>

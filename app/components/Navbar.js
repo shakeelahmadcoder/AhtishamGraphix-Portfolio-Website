@@ -36,7 +36,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <ul className="flex gap-6 text-lg">
-              {['Home', 'About', 'Services', 'Portfolio', 'Testimonials', 'Contact'].map((item) => (
+              {["Home", "About", "Services", "Portfolio", "Testimonials", "Contact"].map((item) => (
                 <Link 
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -47,44 +47,48 @@ const Navbar = () => {
                 </Link>
               ))}
             </ul>
-            <button className="ml-4 py-2 px-6 border-2 border-white text-white rounded-md hover:bg-blue-300 hover:text-black transition-all duration-300 hover:scale-105">
+            <a 
+              href="https://wa.me/923219350989" // WhatsApp direct link
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-4 py-2 px-6 border-2 border-white text-white rounded-md hover:bg-blue-300 hover:text-black transition-all duration-300 hover:scale-105"
+            >
               Get Started
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Icon */}
           <FiAlignJustify 
             onClick={handleToggle} 
-            className={`md:hidden text-3xl cursor-pointer text-white transition-transform ${isOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'}`}
+            className="md:hidden text-3xl cursor-pointer text-white"
           />
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ${isOpen ? 'visible bg-black/50' : 'invisible'}`} onClick={handleToggle}></div>
-
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-0 right-0 h-full w-64 bg-white z-50 transform transition-all duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex flex-col h-full p-6">
-          <ImCross 
-            onClick={handleToggle} 
-            className="self-end text-2xl mb-8 cursor-pointer hover:rotate-90 transition-transform duration-300"
-          />
-          <ul className="flex flex-col gap-4">
-            {['Home', 'About', 'Services', 'Portfolio', 'Testimonials', 'Contact'].map((item, index) => (
-              <Link
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-black hover:text-blue-900 py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
-                {item}
-              </Link>
-            ))}
-          </ul>
-          <button className="mt-8 py-2 px-6 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-all duration-300 hover:scale-105">
-            Get Started
-          </button>
-        </div>
+      <div className={`fixed inset-0 bg-white z-50 flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${isOpen ? 'w-full h-full' : 'w-0 h-0 overflow-hidden'}`}>
+        <ImCross 
+          onClick={handleToggle} 
+          className="absolute top-5 right-5 text-3xl cursor-pointer hover:rotate-90 transition-transform duration-300"
+        />
+        <ul className="flex flex-col items-center gap-6 text-lg text-black">
+          {["Home", "About", "Services", "Portfolio", "Testimonials", "Contact"].map((item) => (
+            <Link
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              onClick={handleToggle}
+              className="text-black hover:text-blue-900 py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              {item}
+            </Link>
+          ))}
+        </ul>
+        <a 
+          href="tel:+923219350989" // Direct call link
+          className="mt-8 py-2 px-6 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-all duration-300 hover:scale-105"
+        >
+          Get Started
+        </a>
       </div>
     </nav>
   );

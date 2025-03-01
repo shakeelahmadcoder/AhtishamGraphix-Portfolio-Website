@@ -41,12 +41,18 @@ const Page = () => {
 
     // Services cards animation
     gsap.from(servicesRef.current?.children || [], {
-      
       duration: 0.8,
       y: 50,
       opacity: 0,
       stagger: 0.1,
-      ease: 'back.out(1.7)'
+      ease: 'back.out(1.7)',
+      scrollTrigger: {
+        trigger: servicesRef.current,
+        start: 'top 80%',
+        end: 'top 30%',
+        toggleActions: "play none none reverse", // Play on enter, reverse on leave
+        markers: false,
+      },
     });
 
     // Section animations
@@ -54,7 +60,10 @@ const Page = () => {
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
-          start: 'top center'
+          start: 'top 80%',
+          end: 'top 30%',
+          toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          markers: false,
         },
         duration: 0.8,
         y: 50,
