@@ -52,9 +52,12 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col sm:flex-row items-center sm:items-start md:gap-12">
+    <div
+      id="about"
+      className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col sm:flex-row justify-center items-center gap-12"
+    >
       {/* Image Section */}
-      <div ref={leftRef} className="w-full sm:w-1/2 flex justify-center">
+      <div ref={leftRef} className="w-full sm:w-1/2 flex justify-center items-center">
         <Image
           src={self.src}
           width={500}
@@ -64,7 +67,10 @@ const About = () => {
       </div>
 
       {/* Content Section */}
-      <div ref={rightRef} className="w-full text-center sm:text-start sm:w-1/2 flex flex-col sm:justify-start justify-center sm:items-start items-center">
+      <div
+        ref={rightRef}
+        className="w-full sm:w-1/2 flex flex-col justify-center items-center sm:items-start text-center sm:text-start"
+      >
         <h1 className="text-3xl font-bold text-blue-900 mb-6">
           Hey there! I am Muhammad Ahtisham
         </h1>
@@ -79,10 +85,10 @@ const About = () => {
             <h1 className="font-semibold w-14 md:w-32">Name</h1>
             <p>: Muhammad Ahtisham</p>
           </div>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <h1 className="font-semibold w-14 md:w-32">Address</h1>
             <p>: Chak No 11/50MB Jauharabad</p>
-          </div>
+          </div> */}
           <div className="flex gap-4">
             <h1 className="font-semibold w-14 md:w-32">Phone</h1>
             <p>: 03219350989</p>
@@ -94,7 +100,7 @@ const About = () => {
         </div>
 
         {/* Download CV Button */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <a
             href="/cv.pdf"
             download="Muhammad_Ahtisham_CV.pdf"
@@ -102,7 +108,7 @@ const About = () => {
           >
             Download CV
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

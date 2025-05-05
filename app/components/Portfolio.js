@@ -35,8 +35,7 @@ import Media2 from "../../public/ImagesPortfolio/Media2.jpg";
 import Media3 from "../../public/ImagesPortfolio/Media3.jpg";
 import Media4 from "../../public/ImagesPortfolio/Media4.jpg";
 import Media5 from "../../public/ImagesPortfolio/Media5.jpg";
-import Media6 from "../../public/ImagesPortfolio/Media6.jpg";
-import Media7 from "../../public/ImagesPortfolio/Media7.jpg";
+
 import Package1 from "../../public/ImagesPortfolio/Package1.jpg";
 import Package2 from "../../public/ImagesPortfolio/Package2.jpg";
 import Package3 from "../../public/ImagesPortfolio/Package3.jpg";
@@ -122,6 +121,14 @@ const portfolioData = {
     { id: 103, image: Fiverr11 },
     { id: 104, image: Fiverr12 },
   ],
+  Social_Media: [
+    { id: 32, image: Media1 },
+    { id: 33, image: Media2 },
+    { id: 34, image: Media3 },
+    { id: 35, image: Media4 },
+    { id: 36, image: Media5 },
+    
+  ],
   Package: [
     { id: 11, image: Package1 },
     { id: 12, image: Package2 },
@@ -151,16 +158,8 @@ const portfolioData = {
     { id: 30, image: Logo1 },
     { id: 31, image: Logo2 },
   ],
-  Media: [
-    { id: 32, image: Media1 },
-    { id: 33, image: Media2 },
-    { id: 34, image: Media3 },
-    { id: 35, image: Media4 },
-    { id: 36, image: Media5 },
-    { id: 37, image: Media6 },
-    { id: 38, image: Media7 },
-  ],
-  CompanyProfile: [
+
+  Company_Profile: [
     { id: 39, image: Company1 },
     { id: 40, image: Company2 },
     { id: 41, image: Company3 },
